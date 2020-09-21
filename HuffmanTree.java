@@ -123,16 +123,18 @@ public class HuffmanTree {
      */
 	public int countTreeInBits(TreeNode n) {
 		// Return 0 since no bits will be written from this place
-        if(n == null){
-            return 0;
-        }
-        // We are at a leaf, so return the number of bits in character and 2 for the
-        // node and EOF marker
-        if(n.isLeaf()){
-            return IHuffConstants.BITS_PER_WORD + ADDED_EOF + BITS_PER_NODE;
-        }
-        // Continue down tree, but return 1 for the current internal node
-        return BITS_PER_NODE + countTreeInBits(n.getLeft()) + countTreeInBits(n.getRight());
+		if(n == null){
+			return 0;
+		}
+		
+		// We are at a leaf, so return the number of bits in character and 2 for the
+		// node and EOF marker
+		if(n.isLeaf()){
+		    return IHuffConstants.BITS_PER_WORD + ADDED_EOF + BITS_PER_NODE;
+		}
+		
+		// Continue down tree, but return 1 for the current internal node
+		return BITS_PER_NODE + countTreeInBits(n.getLeft()) + countTreeInBits(n.getRight());
 	}
 	
 	/*
@@ -199,8 +201,8 @@ public class HuffmanTree {
 		int arbitraryFreq = 0;
 		
 		// Reads a bit NUM_OF_CHILDREN times to check each side in traversal order
-    	for(int i = 0; i < NUM_OF_CHILDREN; i++) {
-    		// Get the current character in the input data
+    		for(int i = 0; i < NUM_OF_CHILDREN; i++) {
+    			// Get the current character in the input data
 			int next = bit.readBits(BITS_PER_NODE);
 			
 			// If the number indicates an internal node, then traverse down tree
@@ -230,48 +232,48 @@ public class HuffmanTree {
 					n.setRight(new TreeNode(value, arbitraryFreq));
 				}
 			}
-    	}
+    		}
 	}
 	
 	/**
 	 * Write in appropriate character by following path in input and returning the 
 	 * number of bits written in the process
 	 * @param bit is used to read the input of the data
-     * @param bot is used to write in data for output
+    	 * @param bot is used to write in data for output
 	 */
 	public int decodeData(BitInputStream bit, BitOutputStream bot) throws IOException {
-    	// Variables to represent the beginning of a path
+    		// Variables to represent the beginning of a path
 		TreeNode trav = root;
 		// Variable to represent the next direction of the path
-    	int next = 0;
-    	// Variable to hold the number of bits written
-    	int sum = 0;
+    		int next = 0;
+		// Variable to hold the number of bits written
+		int sum = 0;
     	
-    	// Traverse through tree to get each character and stop once we reach the EOF marker
-    	while(next != -1 && trav.getValue() != IHuffConstants.PSEUDO_EOF) {
-    		// If the current node is a leaf, then write the value from the node
-    		if(trav.isLeaf()) {
-    			// Write value into output
-    			bot.writeBits(IHuffConstants.BITS_PER_WORD, trav.getValue());
-    			sum += IHuffConstants.BITS_PER_WORD;
-    			// Reset the traversal node
-    			trav = root;
+		// Traverse through tree to get each character and stop once we reach the EOF marker
+		while(next != -1 && trav.getValue() != IHuffConstants.PSEUDO_EOF) {
+			// If the current node is a leaf, then write the value from the node
+			if(trav.isLeaf()) {
+				// Write value into output
+				bot.writeBits(IHuffConstants.BITS_PER_WORD, trav.getValue());
+				sum += IHuffConstants.BITS_PER_WORD;
+				// Reset the traversal node
+				trav = root;
     			
-    		// We are in an internal node, check what direction to go
-    		} else {
-    			// Get the next direction of the input data
-    			next = bit.readBits(BITS_PER_NODE);
-        		
-    			// Go left if the next number indicates to go left, otherwise go right
-        		if(next == GO_LEFT) {
-        			trav = trav.getLeft();
-        		} else if(next == GO_RIGHT) {
-        			trav = trav.getRight();
-        		}
+			// We are in an internal node, check what direction to go
+			} else {
+				// Get the next direction of the input data
+				next = bit.readBits(BITS_PER_NODE);
+
+				// Go left if the next number indicates to go left, otherwise go right
+				if(next == GO_LEFT) {
+					trav = trav.getLeft();
+				} else if(next == GO_RIGHT) {
+					trav = trav.getRight();
+				}
+    			}
     		}
-    	}
-    	return sum;
-    }
+    		return sum;
+	}
 		
 	/*
 	 * Method to printTree for debugging purposes
@@ -282,16 +284,16 @@ public class HuffmanTree {
 		if(root == null) {
 			throw new IllegalArgumentException("Root node is null");
 		}
-        printTree(root, "");
-    }
-
+        	printTree(root, "");
+    	}
+	
 	// Recursively print tree
-    private void printTree(TreeNode n, String spaces) {
-        if(n != null) {
+    	private void printTree(TreeNode n, String spaces) {
+        	if(n != null) {
 
-            printTree(n.getRight(), spaces + "  ");
-            System.out.println(spaces + (char)n.getValue() + " - " + n.getFrequency());
-            printTree(n.getLeft(), spaces + "  ");
-        }
-    }
+		    printTree(n.getRight(), spaces + "  ");
+		    System.out.println(spaces + (char)n.getValue() + " - " + n.getFrequency());
+		    printTree(n.getLeft(), spaces + "  ");
+		}
+    	}
 }
