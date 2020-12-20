@@ -7,6 +7,7 @@ In this project, we implement the miminal prefix coding algorithm that produces 
 ### Compression
 We will be compressing the CIA Fact Book of 2008 that is made up of 28,867,432 bits using the Standard Count Format (SCF) header. After the compression process the compressed file will be made up of 552,061 bits, that is roughly 2% of the size of the original file.
 
+![gif](edgeledger-site.gif)
 
 ## Key Feautures
 
