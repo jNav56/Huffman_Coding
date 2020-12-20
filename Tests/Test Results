@@ -1,0 +1,88 @@
+BooksAndHTML
+
+compressing A7_Recursion.html           to A7_Recursion.html.hf             from 41163   bits   to 26189   bits   in 0.089 seconds
+compressing CiaFactBook2000.txt         to CiaFactBook2000.txt.hf           from 3497369 bits   to 2260664 bits   in 0.583 seconds
+compressing jnglb10.txt                 to jnglb10.txt.hf                   from 292059  bits   to 168618  bits   in 0.064 seconds
+compressing kjv10.txt                   to kjv10.txt.hf                     from 4345020 bits   to 2489768 bits   in 0.404 seconds
+compressing melville.txt                to melville.txt.hf                  from 82140   bits   to 47364   bits   in 0.087 seconds
+compressing quotes.htm                  to quotes.htm.hf                    from 61563   bits   to 38423   bits   in 0.101 seconds
+compressing rawMovieGross.txt           to rawMovieGross.txt.hf             from 117272  bits   to 53833   bits   in 0.057 seconds
+compressing revDictionary.txt           to revDictionary.txt.hf             from 1130523 bits   to 611618  bits   in 2.190 seconds
+compressing syllabus.htm                to syllabus.htm.hf                  from 33273   bits   to 21342   bits   in 0.090 seconds
+compressing ThroughTheLookingGlass.txt  to ThroughTheLookingGlass.txt.hf    from 188199  bits   to 110293  bits   in 0.017 seconds
+--------
+total bytes read:           9,788,581
+total compressed bytes:     5,828,112
+total percent compression:  40.460 %
+compression time:           3.682 seconds
+
+--------------------------------------------------------------
+calgary
+
+compressing bib     to bib.hf       from 111261 bits    to 73795  bits   in 0.338 seconds
+compressing book1   to book1.hf     from 768771 bits    to 439409 bits   in 1.628 seconds
+compressing book2   to book2.hf     from 610856 bits    to 369335 bits   in 1.347 seconds
+compressing geo     to geo.hf       from 102400 bits    to 73592  bits   in 0.290 seconds
+compressing news    to news.hf      from 377109 bits    to 247428 bits   in 0.892 seconds
+compressing obj1    to obj1.hf      from 21504  bits    to 17085  bits   in 0.080 seconds
+compressing obj2    to obj2.hf      from 246814 bits    to 195131 bits   in 0.728 seconds
+compressing paper1  to paper1.hf    from 53161  bits    to 34371  bits   in 0.145 seconds
+compressing paper2  to paper2.hf    from 82199  bits    to 48649  bits   in 0.194 seconds
+compressing paper3  to paper3.hf    from 46526  bits    to 28309  bits   in 0.128 seconds
+compressing paper4  to paper4.hf    from 13286  bits    to 8894   bits   in 0.052 seconds
+compressing paper5  to paper5.hf    from 11954  bits    to 8465   bits   in 0.044 seconds
+compressing paper6  to paper6.hf    from 38105  bits    to 25057  bits   in 0.120 seconds
+compressing pic     to pic.hf       from 513216 bits    to 107586 bits   in 0.426 seconds
+compressing progc   to progc.hf     from 39611  bits    to 26948  bits   in 0.125 seconds
+compressing progl   to progl.hf     from 71646  bits    to 44017  bits   in 0.193 seconds
+compressing progp   to progp.hf     from 49379  bits    to 31248  bits   in 0.147 seconds
+compressing trans   to trans.hf     from 93695  bits    to 66252  bits   in 0.276 seconds
+--------
+total bytes read:           3,251,493
+total compressed bytes:     1,845,571
+total percent compression:  43.239 %
+compression time:           7.153 seconds
+
+--------------------------------------------------------------
+waterloo
+
+compressing clegg.tif    to clegg.tif.hf    from 2149096 bits   to 2034595 bits   in 1.577 seconds
+compressing frymire.tif  to frymire.tif.hf  from 3706306 bits   to 2188593 bits   in 1.766 seconds
+compressing lena.tif     to lena.tif.hf     from 786568  bits   to 766146  bits   in 1.389 seconds
+compressing monarch.tif  to monarch.tif.hf  from 1179784 bits   to 1109973 bits   in 1.078 seconds
+compressing peppers.tif  to peppers.tif.hf  from 786568  bits   to 756968  bits   in 1.350 seconds
+compressing sail.tif     to sail.tif.hf     from 1179784 bits   to 1085501 bits   in 1.195 seconds
+compressing serrano.tif  to serrano.tif     from 1498414 bits   to 1127645 bits   in 1.343 seconds
+compressing tulips.tif   to tulips.tif.hf   from 1179784 bits   to 1135861 bits   in 1.051 seconds
+--------
+total bytes read:           12,466,304
+total compressed bytes:     10,205,282
+total percent compression:  18.137 %
+compression time:           9.849 seconds
+
+--------------------------------------------------------------
+SmallerTests
+
+compressing allWASD                                 to allWASD.hf                                   from 53640   bits   to 14713 bits    in 0.100 seconds
+compressing mostlyEs.txt                            to mostlyEs.txt.hf                              from 108487  bits   to 16100 bits    in 0.080 seconds
+compressing NSN_DATA.xls                            to NSN_DATA.xls.hf                              from 4270592 bits   to 2942442 bits  in 5.886 seconds
+compressing smallFile                               to smallFile.hf                                 from 37      bits   to 1050 bits     in 0.009 seconds
+compressing TreeTestFile.bmp                        to TreeTestFile.bmp.hf                          from 995190  bits   to 679887 bits   in 1.430 seconds
+compressing USA_2008_Summer_Olympics_Wikipedia.htm  to USA_2008_Summer_Olympics_Wikipedia.htm.hf    from 1768656 bits   to 1225832 bits  in 2.235 seconds
+--------
+total bytes read:           7,196,602
+total compressed bytes:     4,880,024
+total percent compression:  32.190 %
+compression time:           9.740 seconds
+
+--------------------------------------------------------------
+What kinds of file lead to lots of compressions? What kind of files had little or no compression?
+
+	Files that have a lot of the same repeated information tend to lead to a lot more compression versus other files 
+	with a varying of distinct characters.
+
+	Bigger files tend to have more compression versus smaller files which in some cases have more data when compressed.
+
+What happens when you try and compress a huffman code file?
+
+	The compression file gets bigger.
